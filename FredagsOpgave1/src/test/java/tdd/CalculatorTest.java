@@ -25,6 +25,22 @@ class CalculatorTest {
     }
 
     @Test
+    @DisplayName("String add")
+    void addString(){
+        int expected = 5;
+        int actual = calc.add("2,2,1");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("Array add")
+    void addArray(){
+        int expected = 5;
+        int actual = calc.add(new int[]{2,2,1});
+        assertEquals(expected, actual);
+    }
+
+    @Test
     @DisplayName("Subtract")
     void subtract(){
         int expected = 5;
